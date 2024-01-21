@@ -4,5 +4,7 @@ function getRandom() {
 
 $wd = "cyberword1"
 $path = "$env:temp/$wd"
+$initial_dir = Get-Location
 mkdir $path
-cd $path
+cd $initial_dir
+del installer.ps1
